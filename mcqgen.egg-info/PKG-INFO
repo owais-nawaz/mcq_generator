@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: mcqgen
+Version: 0.0.1
+Author: owais nawaz
+Author-email: owaisnawaz17@gmail.com
+Requires-Dist: openai
+Requires-Dist: langchain
+Requires-Dist: python-dotenv
+Requires-Dist: PyPDF2
+Requires-Dist: langchain_community
+Requires-Dist: langchain_openai
