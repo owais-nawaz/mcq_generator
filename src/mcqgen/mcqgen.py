@@ -7,7 +7,7 @@ from src.mcqgen.utils import read_file, get_table_data
 from src.mcqgen.logger import logging
 
 from langchain_openai import ChatOpenAI
-from langchain.llms import OpenAI
+from langchain_community.llms import OpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain.chains import SequentialChain
@@ -17,7 +17,7 @@ from langchain.chains import SequentialChain
 load_dotenv()
 
 # Access the environment variables just like you would with os.environ
-key = os.getenv("OPENAI_API_KEY")
+KEY = os.getenv("OPENAI_API_KEY")
 
 
 llm = ChatOpenAI(api_key=KEY, model_name="gpt-3.5-turbo", temperature=0.7)
@@ -41,7 +41,7 @@ quiz_generation_prompt = PromptTemplate(
 
 
 quiz_chain = LLMChain(
-    llm=llm, prompts=quiz_generation_prompt, output_key="quiz", verbose=True
+    llm=llm, prompt=quiz_generation_prompt, output_key="quiz", verbose=True
 )
 
 
